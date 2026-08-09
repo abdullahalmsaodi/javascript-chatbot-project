@@ -8,6 +8,7 @@ import "./App.css";
 
 function App() {
   const [chatMessages, setChatMessages] = useState([]);
+  const title = `${chatMessages.length} Messages`;
 
   useEffect(() => {
     // console.log("Running effect");
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
       <link rel="icon" type="image/svg+xml" href={robotIcon} />
-      <title>Chatbot Project</title>
+      <title>{title}</title>
 
       <div className="app-container">
         {chatMessages.length === 0 ? (
